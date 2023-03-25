@@ -28,7 +28,7 @@ fun String.tryInt(key: Int): Any? {
         75,
         78,
         80,
-        81 -> this.toIntOrNull()
+        81 -> this
         else -> this
     }
 }
