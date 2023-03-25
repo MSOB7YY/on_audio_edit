@@ -50,7 +50,7 @@ class AudioModel {
   int? get caralogNo => _info["CATALOG_NO"];
 
   /// Return song [comment]
-  int? get comment => _info["COMMENT"];
+  String? get comment => _info["COMMENT"];
 
   /// Return song [composer]
   String? get composer => _info["COMPOSER"];
@@ -68,7 +68,7 @@ class AudioModel {
   String? get coverArt => _info["COVER_ART"];
 
   /// Return song [discNo]
-  String? get discNo => _info["DISC_NO"];
+  int? get discNo => _info["DISC_NO"];
 
   /// Return song [discSubtitle]
   String? get discSubtitle => _info["DISC_SUBTITLE"];
@@ -128,8 +128,7 @@ class AudioModel {
   int? get musicBrainzDiscId => _info["MUSICBRAINZ_DISC_ID"];
 
   /// Return song [musicBrainzOriginalReleaseId]
-  int? get musicBrainzOriginalReleaseId =>
-      _info["MUSICBRAINZ_ORIGINAL_RELEASE_ID"];
+  int? get musicBrainzOriginalReleaseId => _info["MUSICBRAINZ_ORIGINAL_RELEASE_ID"];
 
   /// Return song [musicBrainzReleaseArtistId]
   int? get musicBrainzReleaseArtistId => _info["MUSICBRAINZ_RELEASEARTISTID"];
@@ -204,7 +203,7 @@ class AudioModel {
   int? get tempo => _info["TEMPO"];
 
   /// Return song [title]
-  String get title => _info["TITLE"];
+  String? get title => _info["TITLE"];
 
   /// Return song [titleSort]
   String? get titleSort => _info["TITLE_SORT"];

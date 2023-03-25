@@ -115,7 +115,7 @@ class OnAudioEdit10(private val context: Context, private val activity: Activity
         for (info in getTagsAndInfo) {
             // If value is null, ignore.
             val value = "${info.value}"
-            if (value.isNotEmpty()) audioTag.setField(info.key, value)
+            audioTag.setField(info.key, value)
         }
         audioFile.file = temp
 
