@@ -316,10 +316,10 @@ class OnAudioEdit {
     String? description,
     bool? searchInsideFolders,
   }) async {
-    assert(
-        openFilePicker == false && imagePath == null,
-        "Cannot change artwork image without image.\n"
-        "Set [openFilePicker] to true or give [imagePath] a correct path");
+    // assert(
+    //     openFilePicker == false && imagePath == null,
+    //     "Cannot change artwork image without image.\n"
+    //     "Set [openFilePicker] to true or give [imagePath] a correct path");
     final bool resultEditArt = await _channel.invokeMethod("editArtwork", {
       "data": data,
       "type": format != null ? format.index : ArtworkFormat.JPEG.index,
