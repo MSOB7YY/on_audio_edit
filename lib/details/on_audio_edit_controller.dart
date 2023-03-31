@@ -88,8 +88,7 @@ class OnAudioEdit {
     List<String> data, {
     bool separateThread = false,
   }) async {
-    final List<dynamic> resultReadAudio =
-        await _channel.invokeMethod("readAudios", {
+    final List<dynamic> resultReadAudio = await _channel.invokeMethod("readAudios", {
       "data": data,
       "separateThread": separateThread,
     });
@@ -119,8 +118,7 @@ class OnAudioEdit {
   ///
   /// Use [permissionsStatus] to see permissions status.
   Future<String> readSingleAudioTag(String data, TagType tag) async {
-    final String resultSingleAudioTag =
-        await _channel.invokeMethod("readSingleAudioTag", {
+    final String resultSingleAudioTag = await _channel.invokeMethod("readSingleAudioTag", {
       "data": data,
       "tag": tag.index,
     });
@@ -152,14 +150,12 @@ class OnAudioEdit {
   /// * Calling any method without [READ] and [WRITE] permission will throw a error.
   ///
   /// Use [permissionsStatus] to see permissions status.
-  Future<AudioModel> readSpecificsAudioTags(
-      String data, List<TagType> tags) async {
+  Future<AudioModel> readSpecificsAudioTags(String data, List<TagType> tags) async {
     List<int> tagsIndex = [];
     for (var it in tags) {
       tagsIndex.add(it.index);
     }
-    final Map<dynamic, dynamic> readSpecificsAudioTags =
-        await _channel.invokeMethod("readSpecificsAudioTags", {
+    final Map<dynamic, dynamic> readSpecificsAudioTags = await _channel.invokeMethod("readSpecificsAudioTags", {
       "data": data,
       "tags": tagsIndex,
     });
@@ -321,7 +317,7 @@ class OnAudioEdit {
     bool? searchInsideFolders,
   }) async {
     assert(
-        openFilePicker == false || imagePath == null,
+        openFilePicker == false && imagePath == null,
         "Cannot change artwork image without image.\n"
         "Set [openFilePicker] to true or give [imagePath] a correct path");
     final bool resultEditArt = await _channel.invokeMethod("editArtwork", {
@@ -348,8 +344,7 @@ class OnAudioEdit {
   /// * This method only works on Android 9 or below (later i will add support android 10).
   /// * If return true delete works, else delete found a problem.
   Future<bool> deleteArtwork(String data) async {
-    final bool resultDeleteArt =
-        await _channel.invokeMethod("deleteArtwork", {"data": data});
+    final bool resultDeleteArt = await _channel.invokeMethod("deleteArtwork", {"data": data});
     return resultDeleteArt;
   }
 
