@@ -115,7 +115,7 @@ class OnArtworkEdit10(private val context: Context, private val activity: Activi
         audioTag.deleteArtworkField()
 
         // Getting image and creating artwork field
-        val imageData = File(findImage(uri))
+        val imageData = File(uri)
         val artwork = ArtworkFactory.createArtworkFromFile(imageData)
 
         // Setup Image

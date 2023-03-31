@@ -42,7 +42,7 @@ class OnArtworkEdit(private val context: Context) {
         audioTag.deleteArtworkField()
 
         // Getting image and creating artwork field
-        val imageData = File(findImage(internalUri))
+        val imageData = File(internalUri)
         val artwork = ArtworkFactory.createArtworkFromFile(imageData)
 
         // Setup Image
