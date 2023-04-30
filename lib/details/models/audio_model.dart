@@ -209,7 +209,7 @@ class AudioModel {
   String? get titleSort => _info["TITLE_SORT"];
 
   /// Return song [track]
-  int? get track => _info["TRACK"];
+  String? get track => _info["TRACK"];
 
   /// Return song [trackTotal]
   int? get trackTotal => _info["TRACK_TOTAL"];
