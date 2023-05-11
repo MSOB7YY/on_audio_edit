@@ -68,7 +68,7 @@ class AudioModel {
   String? get coverArt => _info["COVER_ART"];
 
   /// Return song [discNo]
-  String? get discNo => _info["DISC_NO"];
+  int? get discNo => _info["DISC_NO"];
 
   /// Return song [discSubtitle]
   String? get discSubtitle => _info["DISC_SUBTITLE"];
