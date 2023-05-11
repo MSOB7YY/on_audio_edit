@@ -68,7 +68,7 @@ class AudioModel {
   String? get coverArt => _info["COVER_ART"];
 
   /// Return song [discNo]
-  int? get discNo => _info["DISC_NO"];
+  String? get discNo => _info["DISC_NO"];
 
   /// Return song [discSubtitle]
   String? get discSubtitle => _info["DISC_SUBTITLE"];
@@ -212,7 +212,7 @@ class AudioModel {
   String? get track => _info["TRACK"];
 
   /// Return song [trackTotal]
-  int? get trackTotal => _info["TRACK_TOTAL"];
+  String? get trackTotal => _info["TRACK_TOTAL"];
 
   /// Return song [urlDiscOGSArtistSite]
   String? get urlDiscOGSArtistSite => _info["URL_DISCOGS_ARTIST_SITE"];
