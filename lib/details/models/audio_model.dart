@@ -212,7 +212,7 @@ class AudioModel {
   String? get track => _info["TRACK"];
 
   /// Return song [trackTotal]
-  String? get trackTotal => _info["TRACK_TOTAL"];
+  int? get trackTotal => _info["TRACK_TOTAL"];
 
   /// Return song [urlDiscOGSArtistSite]
   String? get urlDiscOGSArtistSite => _info["URL_DISCOGS_ARTIST_SITE"];
