@@ -13,19 +13,9 @@ import org.jaudiotagger.tag.FieldKey
 import java.io.File
 
 class OnAudioRead {
+   
     //
     fun readAudio(result: MethodChannel.Result, call: MethodCall) {
-        val separateThread: Boolean = call.argument("separateThread")!!
-        if (separateThread) {
-            Thread {
-                onReadAudio(result, call)
-            }.start()
-        } else {
-            onReadAudio(result, call)
-        }
-    }
-    //
-    fun onReadAudio(result: MethodChannel.Result, call: MethodCall) {
         // Get all information from Dart.
         val data = call.argument<String>("data")!!
 
