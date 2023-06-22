@@ -13,9 +13,14 @@ import org.jaudiotagger.tag.FieldKey
 import java.io.File
 
 class OnAudioRead {
-
     //
     fun readAudio(result: MethodChannel.Result, call: MethodCall) {
+      Thread {
+          onReadAudio(result, call)
+      }.start()
+    }
+    //
+    fun onReadAudio(result: MethodChannel.Result, call: MethodCall) {
         // Get all information from Dart.
         val data = call.argument<String>("data")!!
 
