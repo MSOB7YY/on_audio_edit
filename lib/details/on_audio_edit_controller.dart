@@ -56,9 +56,13 @@ class OnAudioEdit {
   /// * Calling any method without [READ] and [WRITE] permission will send a warning.
   ///
   /// Use [permissionsStatus] to see permissions status.
-  Future<AudioModel> readAudio(String data) async {
+  Future<AudioModel> readAudio(
+    String path, {
+    bool separateThread = true,
+  }) async {
     final Map resultReadAudio = await _channel.invokeMethod("readAudio", {
-      "data": data,
+      "data": path,
+      "separateThread": separateThread,
     });
     return AudioModel(resultReadAudio);
   }

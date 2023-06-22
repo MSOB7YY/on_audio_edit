@@ -15,9 +15,14 @@ import java.io.File
 class OnAudioRead {
     //
     fun readAudio(result: MethodChannel.Result, call: MethodCall) {
-      Thread {
-          onReadAudio(result, call)
-      }.start()
+        val separateThread: Boolean = call.argument("separateThread")!!
+        if (separateThread) {
+            Thread {
+                onReadAudio(result, call)
+            }.start()
+        } else {
+            onReadAudio(result, call)
+        }
     }
     //
     fun onReadAudio(result: MethodChannel.Result, call: MethodCall) {
