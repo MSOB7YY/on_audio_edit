@@ -56,16 +56,21 @@ class OnAudioEdit {
   /// * Calling any method without [READ] and [WRITE] permission will send a warning.
   ///
   /// Use [permissionsStatus] to see permissions status.
+
   Future<AudioModel> readAudio(
     String path, {
-    bool separateThread = true,
+    int maxThreads = 5,
   }) async {
+    _currentThreads++;
     final Map resultReadAudio = await _channel.invokeMethod("readAudio", {
       "data": path,
-      "separateThread": separateThread,
+      "separateThread": _currentThreads <= maxThreads,
     });
+    _currentThreads--;
     return AudioModel(resultReadAudio);
   }
+
+  int _currentThreads = 0;
 
   /// Used to return multiples songs info.
   ///
