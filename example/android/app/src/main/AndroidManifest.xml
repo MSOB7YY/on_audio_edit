@@ -7,9 +7,11 @@
 
    <application
         android:label="on_audio_edit_example"
+        android:name="${applicationName}"
         android:requestLegacyExternalStorage="true"
         android:icon="@mipmap/ic_launcher">
         <activity
+            android:exported="true"
             android:name=".MainActivity"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
