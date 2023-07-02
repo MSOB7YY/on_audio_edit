@@ -42,7 +42,7 @@ class OnAudioEdit(private val context: Context) {
         for (info in getTagsAndInfo) {
             // If value is null, ignore.
             val value = info.value.toString()
-            audioTag.setField(info.key, value)
+            if (value.isNotEmpty()) audioTag.setField(info.key, value)
         }
 
         // Try / Catch to avoid errors

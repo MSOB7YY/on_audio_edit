@@ -13,7 +13,7 @@ import org.jaudiotagger.tag.FieldKey
 import java.io.File
 
 class OnAudioRead {
-   
+
     //
     fun readAudio(result: MethodChannel.Result, call: MethodCall) {
         // Get all information from Dart.
