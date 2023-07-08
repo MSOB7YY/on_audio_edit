@@ -16,8 +16,7 @@ fun warningSizeCall(sizeValue: Long, data: String) {
             Log.i("on_audio_warning", "[$data] size is bigger than 6 MB - [$sizeValue MB]")
         }
         else -> {
-            // Handle the case when sizeValue is less than 6
-            Log.i("on_audio_warning", "[$data] size is less than 6 MB - [$sizeValue MB]")
+          
         }
     }
 }
