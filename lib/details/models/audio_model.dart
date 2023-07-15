@@ -128,7 +128,8 @@ class AudioModel {
   int? get musicBrainzDiscId => _info["MUSICBRAINZ_DISC_ID"];
 
   /// Return song [musicBrainzOriginalReleaseId]
-  int? get musicBrainzOriginalReleaseId => _info["MUSICBRAINZ_ORIGINAL_RELEASE_ID"];
+  int? get musicBrainzOriginalReleaseId =>
+      _info["MUSICBRAINZ_ORIGINAL_RELEASE_ID"];
 
   /// Return song [musicBrainzReleaseArtistId]
   int? get musicBrainzReleaseArtistId => _info["MUSICBRAINZ_RELEASEARTISTID"];
@@ -236,7 +237,7 @@ class AudioModel {
   String? get urlWikipediaReleaseSite => _info["URL_WIKIPEDIA_RELEASE_SITE"];
 
   /// Return song [year]
-  int? get year => _info["YEAR"];
+  String? get year => _info["YEAR"];
 
   //
 
